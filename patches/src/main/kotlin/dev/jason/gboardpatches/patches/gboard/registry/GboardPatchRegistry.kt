@@ -799,11 +799,10 @@ val gboardSignatureBypassPatch = gboardPublicResourcePatch(
 }
 
 @Suppress("unused")
-val gboardGmsBypassPatchPublic = gboardPublicResourcePatch(
-    featureId = "gms_bypass_vivo",
+val gboardGmsBypassPatchPublic = resourcePatch(
     name = "GMS Bypass (Vivo/microG)",
     description = "Force GoogleApiAvailability -> SUCCESS, skip GMS check for Vivo/no-GMS (18.2.4)",
-    default = true
+    use = true
 ) {
     compatibleWith(COMPATIBILITY_GBOARD)
 
